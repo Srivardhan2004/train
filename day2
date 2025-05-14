@@ -1,0 +1,43 @@
+n=int(input())
+if n%4==1:
+    print(1)
+if n%4==2:
+    print(n+1)
+if n%4==3:
+    print(0)
+if n%4==0:
+    print(n)
+l=int(input())
+r=int(input())
+def XoR(n):
+    # Example implementation: XOR of numbers from 1 to n
+    result = 0
+    for i in range(1, n + 1):
+        result ^= i
+    return result
+
+r = 5  # Example value for r
+l = 7  # Example value for l
+
+a = XoR(r)  # XOR of numbers from 1 to r
+b = XoR(l - 1)  # XOR of numbers from 1 to (l-1)
+
+# XOR the results of a and b
+print(a ^ b)
+
+l = [1, 2, 3, 4, 5]
+x = 0
+for i in l:
+    binary = ""
+    temp = i
+    while temp > 0:
+        binary = str(temp % 2) + binary
+        temp //= 2
+    binary_int = int(binary, 2)  # Convert binary string to integer
+    print(x)
+    print(binary_int)
+    x ^= binary_int
+    print(f"binary={binary}, x={format(x, '03b')}")  # Show binary and XOR result
+
+print(f"Final x: {x} (binary: {format(x, '03b')})")
+
