@@ -1,0 +1,80 @@
+def fun(n):
+    if n==0:
+        return
+    print(n,end="")
+    fun(n-1)
+n=int(input())
+fun(n)
+def fun(n):
+    if n==0:
+        return
+    if n%2==0:
+        print(n,end=" ")
+    fun(n-1)
+    if n%2!=0:
+       print(n,end=" ")
+n=5
+fun(n)
+def fun(n,m=1):
+    if m==n+1:
+        return
+    print(m,end=" ")
+    fun(n,m+1)
+    if m!=n:
+        print(m,end=" ")
+n=5
+fun(n)
+def fun(n):
+    if n==1:
+        return 1
+    return n*fun(n-1)
+
+n=5
+print(fun(n))
+def prime(n,i=2):
+    if i*i>n:
+        return True
+    if n%i==0:
+        return False
+    return prime(n,i+1)
+n=5
+if (prime(n)):
+    print("prime")
+else:
+    primt("not")
+def rev(n,re=0):
+    if n==0:
+        return re
+    d=n%10
+    re=(re*10)+d
+    return rev(n//10,re)
+n=int(input())
+print(rev(n))
+def fun(n):
+    if n==1:
+        return 0
+    elif n%2==0:
+        return 1+fun(n//2)
+    else:
+        return 1+min(fun(n-1),fun(n+1))
+n=15
+print(fun(n))
+
+
+def prime(t,i=2):
+    if i*i>t:
+        return True
+    if t%i==0:
+        return False
+    return prime(t,i+1)
+    
+def fun(n,i=0):
+    if i==len(l):
+        return 0
+    fun(l,i+1)
+    t=l[i]
+    if prime(t):
+        print(l[i],end=" ")
+
+l=[1,4,3,2,5]
+print(fun(l))
