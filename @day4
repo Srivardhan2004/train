@@ -1,0 +1,105 @@
+@day4
+def fun(n,sum):
+    if n<1:
+        print(sum)
+        return
+    fun(n-1,sum+n)
+n=5
+fun(n,sum=0)
+fun(5,0)->(4,5)->(3,9)->(2,12)->(1,14)->(0,15)-true->print(15)
+# def fun(n,sum):
+#     if n<1:
+#         print(sum)
+#         return1
+#     fun(n-1,sum+n)
+# n=5
+# fun(n,sum=0)
+# def fun(l,i=0,res=[]):
+#     if i==len(l):
+#         print(res)
+#         return
+#     fun(l,i+1,res+[l[i]])
+#     fun(l,i+1,res)
+# l=list(map(int,input().split()))
+# fun(l)
+# def fun(l,i,k):
+#     if k==0:
+#         return True
+#     if i==0:
+#         return False
+#     if l[i-1]>k:
+#         return fun(l,i-1,k)
+#     return fun(l,i-1,k)or fun(l,i-1,k-l[i-1])
+# l=list(map(int,input().split()))
+# k=7
+# print(fun(l,len(l),k))
+
+# def fun(l,i=0,res=[],k=5,sum=0):
+#     if i==len(l):
+#         for i in res:
+#             sum+=i
+#             if sum==k:
+#                 print(res)
+#         return
+#     fun(l,i+1,res+[l[i]])
+#     fun(l,i+1,res)
+# l=list(map(int,input().split()))
+# fun(l)
+# def generate_subsequences(s, i=0, res=None):
+#     if res is None:
+#         res = []
+#     if i == len(s):
+#         print(res)
+#         return
+#     # Include current character (preserve order)
+#     generate_subsequences(s, i + 1, res + [s[i]])
+#     # Exclude current character
+#     generate_subsequences(s, i + 1, res)
+# 
+# # Example input
+# l = list(map(int, input("Enter space-separated integers: ").split()))
+# generate_subsequences(l)
+# def fun(l,k,i=0,res=[]):
+#     if i==len(l):
+#         if sum(res)==k:
+#             print(res)
+#         return
+#     fun(l,k,i+1,res+[l[i]])
+#     fun(l,k,i+1,res)
+# l=list(map(int,input().split()))
+# k=5
+# fun(l,k)
+# def fun(l,t,count=0,i=0):
+#     if i==len(l):
+#         return count
+#     if t==l[i]:
+#         count+=1
+#     return fun(l,t,count,i+1)
+# l=list(map(int,input().split()))
+# t=5
+# print(fun(l,t))
+# def fun(l,t,i=0):
+#     if i==len(l):
+#         return 0
+#     if l[i]==t:
+#         return 1+fun(l,t,i+1)
+#     return fun(l,t,i+1)
+# l=list(map(int,input().split()))
+# t=2
+# print(fun(l,t))
+
+#codeforce
+# t=int(input())
+# for _ in range(t):
+#     i=1
+#     count=0
+#     k=int(input())
+#     while(i):
+#         if i%3!=0 and i%10!=3:
+#             count+=1
+#             if count==k:
+#                 print(i)
+#                 break
+#         i+=1
+
+
